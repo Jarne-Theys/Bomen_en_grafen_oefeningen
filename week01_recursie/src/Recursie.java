@@ -89,14 +89,33 @@ public class Recursie {
    // oefening 7
 
    public static String changePi(String s) {
+
+      //s.replaceAll("pi","3.14")
+
+      if(s == null){
+         throw new IllegalArgumentException("");
+      }
       if(s.equals("")){
          return s;
       }
+      if(s.charAt(0)=='p'){
+         if(s.charAt(1)=='i'){
+
+         }
+      }
+         return s.charAt(0) + changePi(s.substring(1));
    }
 
    // oefening 8:
    public static int tweelog(int getal) {
-      throw new UnsupportedOperationException("Not yet implemented");
+      if(getal <= 0){
+         throw new IllegalArgumentException("");
+      }
+      if(getal == 1){
+         return 0;
+      } else {
+         return 1 + tweelog(getal/2);
+      }
    }
 
    // oefening 9;
