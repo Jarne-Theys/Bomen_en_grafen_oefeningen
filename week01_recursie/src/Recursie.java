@@ -120,7 +120,14 @@ public class Recursie {
 
    // oefening 9;
    public static double findMaximum(List<Double> lijst) {
-      throw new UnsupportedOperationException("Not yet implemented");
+      if(lijst.size()==0){
+         throw new IllegalArgumentException("");
+      } else if (lijst.size()==1){
+         return lijst;
+      } else if(){//lijst[0] < lijst[1]: findMaximum(lijst - 1ste element)
+         //lijst[1] < lijst[0]: verwijder lijst[1]
+      }
+
    }
 
    // oefening 10;
