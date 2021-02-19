@@ -123,16 +123,22 @@ public class Recursie {
       if(lijst.size()==0){
          throw new IllegalArgumentException("");
       } else if (lijst.size()==1){
-         return lijst;
-      } else if(){//lijst[0] < lijst[1]: findMaximum(lijst - 1ste element)
-         //lijst[1] < lijst[0]: verwijder lijst[1]
+         return lijst.get(0);
+      } else if(lijst.get(0) < lijst.get(1)){
+         lijst.remove(0);
+         findMaximum(lijst);
+      } else if (lijst.get(0) > lijst.get(1)){
+         lijst.remove(1);
+         findMaximum(lijst);
       }
-
+      return lijst.get(0);
    }
 
    // oefening 10;
    public static ArrayList<String> findSubstrings(String string) {
       throw new UnsupportedOperationException("Not yet implemented");
+      //if(string.length()==1){
+      //}
    }
 
 }

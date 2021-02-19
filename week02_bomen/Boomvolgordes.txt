@@ -1,0 +1,8 @@
+Pre-order:
+F B A D C E G I H
+
+In-order:
+A B C D E F G H I 
+
+Post-order:
+A C E D B H I G F

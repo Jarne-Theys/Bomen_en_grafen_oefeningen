@@ -23,4 +23,52 @@ public class BinaryTree<E> {
 			if (this.rightTree != null) this.rightTree.printPreorder();
 	}
 
+	public void printInorder(){
+		if (this.leftTree != null) this.leftTree.printInorder();
+		System.out.print(this.data + " ");
+		if (this.rightTree != null) this.rightTree.printInorder();
+	}
+
+	public void printPostorder(){
+		if (this.leftTree != null) this.leftTree.printPostorder();
+		if (this.rightTree != null) this.rightTree.printPostorder();
+		System.out.print(this.data + " ");
+	}
+
+	public int countNodes(){
+		return CountNodesLeft() + CountNodesRight();
+	}
+	private int CountNodesLeft(){
+		if (this.leftTree != null){
+			return 1 + this.leftTree.countNodes();
+		} else {
+			return 0;
+		}
+	}
+	private int CountNodesRight(){
+		if (this.rightTree != null){
+			return 1 + this.rightTree.countNodes();
+		} else {
+			return 0;
+		}
+	}
+
+	public int getDepth(){
+		return Math.max(getDepthLeft(),getDepthRight());
+	}
+	private int getDepthRight(){
+		if (this.rightTree != null){
+			return 1 + this.rightTree.getDepthRight();
+		} else {
+			return 0;
+		}
+	}
+	private int getDepthLeft(){
+		if (this.leftTree != null){
+			return 1 + this.leftTree.getDepthLeft();
+		} else {
+			return 0;
+		}
+	}
+
 }
