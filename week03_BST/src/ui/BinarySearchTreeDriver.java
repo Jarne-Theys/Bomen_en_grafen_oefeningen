@@ -15,6 +15,9 @@ public class BinarySearchTreeDriver {
 
 		printBoomInfo(boom);
 
+		System.out.println("15 zit in boom: " + boom.lookup(15));
+		System.out.println("15 Succesvol toegevoegd: " + boom.addNode(15));
+		System.out.println("15 zit in boom: " + boom.lookup(15));
 
 	}
 
@@ -22,9 +25,8 @@ public class BinarySearchTreeDriver {
 		if (boom == null) System.out.println("Lege boom");
 		else {
 			boom.printInorder();
-			System.out.print("\nData zit in boom: " + boom.lookup(2));
-			//System.out.println("\nDe grootste waarde uit deze boom = " + boom.searchGreatest());
-			//System.out.println("\nDe kleinste waarde uit deze boom = " + boom.searchSmallest());
+			System.out.println("\nDe grootste waarde uit deze boom = " + boom.searchGreatest());
+			System.out.println("De kleinste waarde uit deze boom = " + boom.searchSmallest());
 		}
 
 

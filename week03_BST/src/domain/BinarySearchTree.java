@@ -31,7 +31,7 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
 
    @Override
    public boolean addNode(E data) {
-      if (data == null) {
+      if (data == null || this.data == null) {
          throw new IllegalArgumentException();
       }
       if (data.compareTo(this.data) == 0) {
@@ -51,13 +51,31 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
       throw new UnsupportedOperationException("Not yet implemented");
    }
 
+   @Override
    public E searchSmallest() {
-      throw new UnsupportedOperationException("Not yet implemented");
+      if(this.leftTree!=null && !this.isLeaf()){
+         return this.leftTree.searchSmallest();
+      } else {
+         return this.data;
+      }
    }
 
+   @Override
    public E searchGreatest() {
-      throw new UnsupportedOperationException("Not yet implemented");
+      if(this.rightTree!=null && !this.isLeaf()){
+         return this.rightTree.searchGreatest();
+      } else {
+         return this.data;
+      }
    }
+
+   public void getPath(E data){
+      System.out.println(this.data + " ");
+      if(this.data.compareTo(data) > 0){
+      }
+   }
+
+
 }
 
 

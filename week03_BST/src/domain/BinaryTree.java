@@ -42,4 +42,20 @@ public class BinaryTree<E>{
 	public boolean lookup(E data) {
 		return true;
 	}
+
+	public E searchSmallest() {
+		throw new UnsupportedOperationException("Not yet implemented");
+	}
+
+	public E searchGreatest() {
+		throw new UnsupportedOperationException("Not yet implemented");
+	}
+
+	public boolean isLeaf(){
+		if(this.rightTree==null && this.leftTree==null){
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
