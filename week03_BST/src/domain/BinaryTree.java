@@ -1,15 +1,10 @@
 package domain;
 
 public class BinaryTree<E>{
-<<<<<<< HEAD
-	public E data;
-	public BinaryTree<E> leftTree, rightTree;
 
-=======
 	E data;
 	BinaryTree<E> leftTree, rightTree;
 
->>>>>>> 29b7f3afe2e852eb89a406b16ba85ad409a6996e
 	public BinaryTree(E data){
 		this(data,null,null);
 	}
