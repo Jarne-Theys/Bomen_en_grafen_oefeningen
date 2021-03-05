@@ -25,7 +25,9 @@ public class BinarySearchTreeDriver {
 		if (boom == null) System.out.println("Lege boom");
 		else {
 			boom.printInorder();
-			System.out.println("\nDe grootste waarde uit deze boom = " + boom.searchGreatest());
+
+			System.out.println();
+			System.out.println("De grootste waarde uit deze boom = " + boom.searchGreatest());
 			System.out.println("De kleinste waarde uit deze boom = " + boom.searchSmallest());
 		}
 
