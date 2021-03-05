@@ -15,16 +15,16 @@ public class BinarySearchTreeDriver {
 
 		printBoomInfo(boom);
 
-		
+
 	}
 
 	private static void printBoomInfo(BinarySearchTree<Integer> boom) {
 		if (boom == null) System.out.println("Lege boom");
 		else {
-			boom.printPreorder();
-			System.out.println();
-			System.out.println("De grootste waarde uit deze boom = " + boom.searchGreatest());
-			System.out.println("De kleinste waarde uit deze boom = " + boom.searchSmallest());
+			boom.printInorder();
+			System.out.print("\nData zit in boom: " + boom.lookup(2));
+			//System.out.println("\nDe grootste waarde uit deze boom = " + boom.searchGreatest());
+			//System.out.println("\nDe kleinste waarde uit deze boom = " + boom.searchSmallest());
 		}
 
 
