@@ -22,7 +22,12 @@ public class BinaryTreeDriver {
 		boom.printPostorder();
 
 		System.out.print("\n\nAantal knopen: "+(boom.countNodes()+1));
-		System.out.print("\nDiepte: "+(boom.getDepth()));
+		System.out.print("\nAantal bladeren: " + boom.countLeaves());
+		System.out.print("\nDiepte: "+(1+boom.getDepth()));
+		System.out.print("\nData van bladeren: ");
+		boom.getDataLeaves();
+		System.out.print("\nnodeE " + nodeE.isLeafString(nodeE.isLeaf()));
+
 
 
 
