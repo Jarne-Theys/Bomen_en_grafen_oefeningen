@@ -113,11 +113,7 @@ public class BinaryTree<E> {
 	}
 
 	public boolean isLeaf(){
-		if(this.rightTree==null && this.leftTree==null){
-			return true;
-		} else {
-			return false;
-		}
+		return this.rightTree == null && this.leftTree == null;
 	}
 	public String isLeafString(boolean isLeaf){
 		if(isLeaf){
@@ -136,6 +132,40 @@ public class BinaryTree<E> {
 			this.rightTree.getDataLeaves();
 		}
 	}
+
+
+
+
+
+
+	//Week 4
+
+
+
+
+	public int count(E data) {
+		return countLeft(data)+countRight(data);
+	}
+
+	private int countLeft(E data){
+		if(this.data == data && this.leftTree!=null){
+				return 1 + this.leftTree.count(data);
+		} else if(this.leftTree!=null) {
+			return this.leftTree.count(data);
+		}
+		return 0;
+	}
+
+	private int countRight(E data){
+		if(this.data == data && this.rightTree!=null){
+			return 1 + this.rightTree.count(data);
+		} else if(this.rightTree!=null) {
+			return this.rightTree.count(data);
+		}
+		return 0;
+	}
+
+
 
 
 }

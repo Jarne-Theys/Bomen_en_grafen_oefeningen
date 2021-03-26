@@ -15,7 +15,7 @@ public class Vak implements Comparable<Vak> {
         }
         this.aantalStudiepunten = aantalStudiepunten;
     }
-
+    
     @Override
     public int compareTo(Vak vak) {
         if (vak == null)
