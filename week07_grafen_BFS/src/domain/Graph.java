@@ -40,6 +40,7 @@ public class Graph {
         // naar
         // eindKnoop
         // (destination)
+        int aantalKnopen = this.getAantalKnopen();
         int[] ancestors = new int[this.getAantalKnopen()];
         initArray(ancestors, infty);
 

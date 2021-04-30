@@ -3,6 +3,15 @@ package domain;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
+
+//NIET KUNNEN STARTEN, NA HALFUUR DENKEN OPLOSSiNG GERAADPLEEGD
+
+
+
+
+
 public class WeightedGraph {
 	private final double[][] gewichtenMatrix;
 	public final static double infty = Double.POSITIVE_INFINITY;
@@ -22,8 +31,23 @@ public class WeightedGraph {
     }
 
     public int[][] findDistances() {
+        int lengteDistanceMatrix = getAantalKnopen();
         int[][] path = new int[getAantalKnopen()][getAantalKnopen()];
         double[][] distanceMatrix = this.gewichtenMatrix.clone();
+        for(int i = 0; i < lengteDistanceMatrix;i++){
+            distanceMatrix[i] = distanceMatrix[i].clone();
+        }
+
+        for(int k = 0; k < lengteDistanceMatrix;k++){
+            for(int rij=0;rij<lengteDistanceMatrix;rij++){
+                for(int kolom = 0;kolom<lengteDistanceMatrix;kolom++){
+                    if(distanceMatrix[rij][k]+distanceMatrix[k][kolom]<distanceMatrix[rij][kolom]){
+                        distanceMatrix[rij][kolom] = distanceMatrix[rij][k] + distanceMatrix[k][kolom];
+                        path[rij][kolom] = k+1;
+                    }
+                }
+            }
+        }
 
 		// oefening 2.3
 
