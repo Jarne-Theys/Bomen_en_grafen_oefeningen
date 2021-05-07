@@ -51,12 +51,6 @@ public class WeightedGraph {
         return path;
     }
 
-        public int[][] getPointerMatrix() {
-        int[][] pointerMatrix = new int[getAantalKnopen()][getAantalKnopen()];
-        double[][] DMatrix = this.gewichtenMatrix.clone();
-		return pointerMatrix;
-	}
-
 	public List<Integer> getShortestPath(int i, int j, int[][] pointer) {
 		List<Integer> res = new ArrayList<>();
 		return res;
